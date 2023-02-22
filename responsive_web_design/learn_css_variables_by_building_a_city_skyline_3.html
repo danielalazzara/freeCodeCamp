@@ -1,0 +1,1034 @@
+# Step 71
+# The windows are stacked on top of each other at the left of the section, behind the purple building. Add a new class below .building-wrap called 
+# window-wrap. Make .window-wrap a flexbox container, and use the align-items and justify-content properties to center its child elements vertically
+# and evenly space them in their parent, respectively.
+
+.window-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+# Step 72
+# Add the new window-wrap class to the .bb4c element.
+
+        <div class="bb4c window-wrap">
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+        </div>
+
+# Step 73
+# Looks good! On to the foreground buildings! Turn the .fb1 building into three sections by nesting three new div elements within it. Give them 
+# the classes of fb1a, fb1b and fb1c, in that order.
+
+      <div class="fb1">
+        <div class="fb1a"></div>
+        <div class="fb1b"></div>
+        <div class="fb1c"></div>
+      </div>
+
+# Step 74
+# Give .fb1b a width of 60% and height of 10%, and .fb1c a width of 100% and height of 80%.
+
+.fb1b {
+  width: 60%;
+  height: 10%;
+}
+
+.fb1c {
+  width: 100%;
+  height: 80%;
+}
+
+# Step 75
+# Add the building-wrap class to the .fb1 element to center the sections.
+
+      <div class="fb1 building-wrap">
+        <div class="fb1a"></div>
+        <div class="fb1b"></div>
+        <div class="fb1c"></div>
+      </div>
+
+# Step 76
+# Move the background-color property and value from .fb1 to .fb1b.
+
+.fb1 {
+  width: 10%;
+  height: 60%;
+}
+
+.fb1b {
+  width: 60%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+
+# Step 77
+# Don't worry about the space at the bottom, everything will get moved down later when you add some height to the element at the top of the building.
+# Add a repeating-linear-gradient to .fb1c with a 90deg angle, your --building-color4 from 0% to 10% and transparent from 10% to 15%.
+
+.fb1c {
+  width: 100%;
+  height: 80%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--building-color4),
+    var(--building-color4) 10%,
+    transparent 10%,
+    transparent 15%
+  )
+}
+
+# Step 78
+# You can add multiple gradients to an element by separating them with a comma (,) like this:
+# gradient1(
+#   colors
+# ),
+# gradient2(
+#   colors
+# );
+# Add a repeating-linear-gradient to .fb1c below the one that's there; use your --building-color4 from 0% to 10% and --window-color4 from 10% and 
+# 90%. This will fill in behind the gradient you added last.
+
+.fb1c {
+  width: 100%;
+  height: 80%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color4),
+      var(--building-color4) 10%,
+      transparent 10%,
+      transparent 15%
+    ),
+              repeating-linear-gradient(
+    var(--building-color4),
+    var(--building-color4) 10%,
+    var( --window-color4) 10%,
+    var( --window-color4) 90%
+  )
+}
+
+# Step 79
+# You're going to use some more border tricks for the top section. Add a border-bottom with a value of 7vh solid var(--building-
+# -color4) to .fb1a. This will put a 7vh height border on the bottom. But since the element has zero size, it only shows up as
+# a 2px wide line from the 1px border that is on all the elements.
+
+.fb1a {
+  border-bottom: 7vh solid var(--building-color4);
+}
+
+# Step 80
+# When you increase the size of the left and right borders, the border on the bottom will expand to be the width of the combined left and right 
+# border widths. Add 2vw solid transparent as the value of the border-left and border-right properties of .fb1a. They will be invisible, but it 
+# will make the border on the bottom 4vw wide.
+
+.fb1a {
+  border-bottom: 7vh solid var(--building-color4);
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent
+}
+
+# Step 81
+# On to the next building! Nest two div elements within .fb2 and give them classes of fb2a and fb2b, in that order.
+
+      <div class="fb2">
+        <div class="fb2a"></div>
+        <div class="fb2b"></div>
+      </div>
+
+# Step 82
+# Give .fb2a a width of 100% and .fb2b a width of 100% and height of 75%.
+
+.fb2a {
+  width: 100%;
+  height: 75%;
+}
+
+.fb2b {
+  width: 100%;
+  height: 75%;
+}
+
+# Step 83
+# Nest three div elements within .fb2b and give them a class of fb2-window. These will be windows for this section of the building.
+
+        <div class="fb2b">
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+        </div>
+
+# Step 84
+# Add your window-wrap class to .fb2b to position the new window elements.
+
+        <div class="fb2b  window-wrap">
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+        </div>
+
+# Step 85
+# Give the .fb2-window elements a width of 22%, height of 100%, and a background-color of your --window-color3 variable.
+
+.fb2-window {
+  width: 22%;
+  height: 100%;
+  background-color: var(--window-color3);
+}
+
+# Step 86
+# Move the background-color property and value from .fb2 to .fb2b to just color the section and not the container.
+
+.fb2 {
+  width: 10%;
+  height: 40%;
+}
+
+.fb2a {
+  width: 100%;
+}
+
+.fb2b {
+  width: 100%;
+  height: 75%;
+  background-color: var(--building-color3);
+}
+
+# Step 87
+# For .fb2a, add a border-bottom of 10vh solid var(--building-color3), and a border-left and border-right of 1vw solid transparent. This time the 
+# border trick will create a trapezoid shape.
+
+.fb2a {
+  width: 100%;
+  border-bottom: 10vh solid var(--building-color3);
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+}
+
+# Step 88
+# For the next building, nest four div elements within .fb3 with classes of fb3a, fb3b, fb3a again, and fb3b again, in that order. This building
+# will have four sections, and the top two will be almost the same as the bottom two.
+
+      <div class="fb3">
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+      </div>
+
+# Step 89
+# Give the .fb3a element a width of 80% and height of 15%. Then give the .fb3b element a width of 100% and height of 35%.
+
+.fb3a {
+  width: 80%;
+  height: 15%;
+}
+
+.fb3b {
+  width: 100%;
+  height: 35%;
+}
+
+# Step 90
+# Remove the background-color property and value from .fb3, and add them to .fb3a and .fb3b.
+
+.fb3 {
+  width: 10%;
+  height: 35%;
+}
+
+.fb3a {
+  width: 80%;
+  height: 15%;
+  background-color: var(--building-color1);
+}
+  
+.fb3b {
+  width: 100%;
+  height: 35%;
+  background-color: var(--building-color1);
+}
+
+# Step 91
+# Add your building-wrap class to the .fb3 element to center the sections.
+
+      <div class="fb3 building-wrap">
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+      </div>
+
+# Step 92
+# Nest three new div elements in the first .fb3a element. Give them each a class of fb3-window. These will be windows for this section.
+
+        <div class="fb3a">
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+        </div>
+
+# Step 93
+# Give the .fb3-window elements a width of 25%, a height of 80%, and use your --window-color1 variable as the background-color value.
+
+.fb3-window {
+  width: 25%;
+  height: 80%;
+  background-color: var(--window-color1);
+}
+
+# Step 94
+# Add your window-wrap class to the .fb3a element to center and space the windows.
+
+        <div class="fb3a window-wrap">
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+        </div>
+
+# Step 95
+# With CSS variables you can change values without searching everywhere in the stylesheet. Change the --window-color1 value to #bb99ff.
+
+:root {
+  --building-color1: #aa80ff;
+  --building-color2: #66cc99;
+  --building-color3: #cc6699;
+  --building-color4: #538cc6;
+  --window-color1: #bb99ff;
+  --window-color2: #8cd9b3;
+  --window-color3: #d98cb3;
+  --window-color4: #8cb3d9;
+}
+
+# Step 96
+# Only three more buildings to go. Nest two new div elements within the .fb4 element and give them the classes of fb4a and fb4b, in that order. 
+# Remember that you sort of flipped the location of .fb4 and .fb5, so it's the rightmost purple building you are working on now.
+
+      <div class="fb4">
+        <div class="fb4a"></div>
+        <div class="fb4b"></div>
+      </div>
+
+# Step 97
+# Give .fb4b a width of 100% and height of 89%.
+
+.fb4b {
+  width: 100%;
+  height: 89%;
+}
+
+# Step 98
+# Add your --building-color1 variable as value of the background-color property of .fb4b. Then, remove the background-color from .fb4.
+
+.fb4 {
+  width: 8%;
+  height: 45%;
+  position: relative;
+  left: 10%;
+}
+
+.fb4b {
+  width: 100%;
+  height: 89%;
+  background-color: var(--building-color1);
+}
+
+# Step 99
+# Nest six div elements within .fb4b and give them all a class of fb4-window.
+
+        <div class="fb4b">
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+        </div>
+
+# Step 100
+# Give the .fb4-window elements a width of 30%, height of 10%, and border-radius of 50%. These will make some circular windows for this building.
+
+.fb4-window {
+  width: 30%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+# Step 101
+# Fill in the windows with your secondary color for this building. Also add a margin of 10% to give the windows some space.
+
+.fb4-window {
+  width: 30%;
+  height: 10%;
+  border-radius: 50%;
+  margin: 10%;
+  background-color: var(--window-color1);
+}
+
+# Step 102
+# The windows are stacked on top of each other on the rightmost purple building. Turn the building into a flexbox parent, and use the flex-wrap 
+# property to put the windows side by side, and push them down to a new row when they don't fit.
+
+.fb4b {
+  width: 100%;
+  height: 89%;
+  background-color: var(--building-color1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+# Step 103
+# This building is going to have another triangle on top. Give the top section a border-top of 5vh solid transparent, and a border-left that is 
+# 8vw, solid, and uses your building color variable as the color.
+
+.fb4a {
+   border-top: 5vh solid transparent;
+   border-left: 8vw solid var(--building-color1);
+ }
+
+# Step 104
+# On to the next building! It's the green one in the foreground. Give it a repeating-linear-gradient with your building color from 0% to 5%, and 
+# transparent from 5% to 10%.
+
+.fb5 {
+  width: 10%;
+  height: 33%;
+  background-color: var(--building-color2);
+  position: relative;
+  right: 10%;
+  background: repeating-linear-gradient(
+    var(--building-color2),
+    var(--building-color2) 5%,
+    transparent 5%,
+    transparent 10%
+  )
+}
+
+# Step 105
+# Add another repeating-linear-gradient below the one you just added. Give it a 90deg direction, use your building color from 0% to 12% and 
+# window color 12% to 44%. This will make a bunch of rectangle windows.
+
+.fb5 {
+  width: 10%;
+  height: 33%;
+  background-color: var(--building-color2);
+  position: relative;
+  right: 10%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+              repeating-linear-gradient(
+      90deg,          
+      var(--building-color2),
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    )
+}
+
+# Step 106
+# You don't need the background-color for this building anymore so you can remove that property.
+
+.fb5 {
+  width: 10%;
+  height: 33%;
+  position: relative;
+  right: 10%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2),
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    );
+}
+
+# Step 107
+# Finally! You made it to the last building! Add a repeating gradient to it with a 90deg direction. Use the building color from 0% to 10% and
+# transparent from 10% to 30%.
+
+.fb6 {
+  width: 9%;
+  height: 38%;
+  background-color: var(--building-color3);
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3) 10%,
+      transparent 10%,
+      transparent 30%
+    )
+}
+
+# Step 108
+# Add another repeating gradient to this building; make it the same as the one you just added, except don't add the 90deg direction and use your
+# window color instead of the two transparent colors.
+
+.fb6 {
+  width: 9%;
+  height: 38%;
+  background-color: var(--building-color3);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--building-color3),
+    var(--building-color3) 10%,
+    transparent 10%,
+    transparent 30%
+  ),
+              repeating-linear-gradient(
+      var(--building-color3),
+      var(--building-color3) 10%,
+      var(--window-color3) 10%,
+      var(--window-color3) 30%
+    );
+}
+
+# Step 109
+# You can remove the background-color for this building now, since it isn't needed.
+
+.fb6 {
+  width: 9%;
+  height: 38%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3) 10%,
+      transparent 10%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      var(--building-color3),
+      var(--building-color3) 10%,
+      var(--window-color3) 10%,
+      var(--window-color3) 30%
+    );
+}
+
+# Step 110
+# Okay, the buildings are done. Go back to the * selector and remove the border you applied to everything at the beginning and the buildings will 
+# come together.
+
+* {
+  box-sizing: border-box;
+}
+
+# Step 111
+# Add sky as a second class to the .background-buildings element. You are going to make a background for the skyline.
+
+    <div class="background-buildings sky">
+      
+# Step 112
+# Give the sky class a radial-gradient. Use #ffcf33 from 0% to 20%, #ffff66 at 21%, and #bbeeff at 100%. This will add circular gradient to the 
+# background that will be your sun.
+      
+.sky {
+  background: radial-gradient(
+    #ffcf33,
+    #ffcf33 20%,
+    #ffff66 21%,
+    #bbeeff 100%
+  )
+}
+      
+# Step 113
+# At the top of the sky gradient color list, where you would put a direction for the gradient; add circle closest-corner at 15% 15%,. This will
+# move the start of the gradient to 15% from the top and left. It will make it end at the closest-corner and it will maintain a circle shape. 
+# These are some keywords built into gradients to describe how it behaves.
+      
+.sky {
+  background: radial-gradient(
+      circle closest-corner at 15% 15%,
+      #ffcf33,
+      #ffcf33 20%,
+      #ffff66 21%,
+      #bbeeff 100%
+    );
+}
+
+# Step 114
+# A media query can be used to change styles based on certain conditions, and they look like this:
+# @media (condition) {
+# 
+# }  
+# Add an empty media query at the bottom of your stylesheet with a condition of max-width: 1000px. Styles added in here will take effect when the 
+# document size is 1000px wide or less.
+
+@media (max-width: 1000px) {
+  
+}
+
+# Step 115
+# Copy and paste your whole sky class along with all of its properties and values into the media query. You are going to make another color scheme 
+# for the skyline that changes it from day to night.
+# Note: You are going to need to scroll past the editable region to copy the class.
+
+@media (max-width: 1000px) {
+  .sky {
+    background: radial-gradient(
+  closest-corner circle at 15% 15%,
+  #ffcf33,
+  #ffcf33 20%,
+  #ffff66 21%,
+  #bbeeff 100%
+);
+  }
+}
+      
+# Step 116
+# In the sky class of the media query, change the two #ffcf33 color values to #ccc, the #ffff66 to #445, and the #bbeeff to #223. Then you can 
+# resize your window to see the background change colors.
+      
+  .sky {
+    background: radial-gradient(
+  closest-corner circle at 15% 15%,
+  #ccc,
+  #ccc 20%,
+  #445 21%,
+  #223 100%
+);
+  }
+      
+# Step 117
+# Add a :root selector to the top of your media query. Then redefine all four of the --building-color variables to use the value #000 there.      
+
+:root {
+  --building-color1: #000;
+  --building-color2: #000;
+  --building-color3: #000;
+  --building-color4: #000;
+}
+
+# Step 118
+# Lastly, in the :root selector of the media query, redefine all four of the --window-color variables to use #777. When you're done, resize the 
+# window and watch it go from day to night.
+# Variables are primarily used with colors, and that's how you used them here. But they can be given any value and used on any property. Your 
+# project looks great!
+
+  :root {
+    --building-color1: #000;
+    --building-color2: #000;
+    --building-color3: #000;
+    --building-color4: #000;
+    --window-color1: #777;
+    --window-color2: #777;
+    --window-color3: #777;
+    --window-color4: #777;
+  }
+      
+ :root {
+  --building-color1: #aa80ff;
+  --building-color2: #66cc99;
+  --building-color3: #cc6699;
+  --building-color4: #538cc6;
+  --window-color1: #bb99ff;
+  --window-color2: #8cd9b3;
+  --window-color3: #d98cb3;
+  --window-color4: #8cb3d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.background-buildings, .foreground-buildings {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+}
+
+.building-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sky {
+  background: radial-gradient(
+      closest-corner circle at 15% 15%,
+      #ffcf33,
+      #ffcf33 20%,
+      #ffff66 21%,
+      #bbeeff 100%
+    );
+}
+
+/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+.bb1 {
+  width: 10%;
+  height: 70%;
+}
+
+.bb1a {
+  width: 70%;
+}
+  
+.bb1b {
+  width: 80%;
+}
+  
+.bb1c {
+  width: 90%;
+}
+
+.bb1d {
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+      var(--building-color1) 50%,
+      var(--window-color1)
+    );
+}
+
+.bb1-window {
+  height: 10%;
+  background: linear-gradient(
+      var(--building-color1),
+      var(--window-color1)
+    );
+}
+
+.bb2 {
+  width: 10%;
+  height: 50%;
+}
+
+.bb2a {
+  border-bottom: 5vh solid var(--building-color2);
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+}
+
+.bb2b {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 6%,
+      var(--window-color2) 6%,
+      var(--window-color2) 9%
+    );
+}
+
+.bb3 {
+  width: 10%;
+  height: 55%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3),
+      var(--window-color3) 15%
+    );
+}
+
+.bb4 {
+  width: 11%;
+  height: 58%;
+}
+
+.bb4a {
+  width: 3%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+
+.bb4b {
+  width: 80%;
+  height: 5%;
+  background-color: var(--building-color4);
+}
+  
+.bb4c {
+  width: 100%;
+  height: 85%;
+  background-color: var(--building-color4);
+}
+
+.bb4-window {
+  width: 18%;
+  height: 90%;
+  background-color: var(--window-color4);
+}
+
+/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
+.fb1 {
+  width: 10%;
+  height: 60%;
+}
+
+.fb1a {
+  border-bottom: 7vh solid var(--building-color4);
+  border-left: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+}
+
+.fb1b {
+  width: 60%;
+  height: 10%;
+  background-color: var(--building-color4);
+}
+  
+.fb1c {
+  width: 100%;
+  height: 80%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color4),
+      var(--building-color4) 10%,
+      transparent 10%,
+      transparent 15%
+    ),
+    repeating-linear-gradient(
+      var(--building-color4),
+      var(--building-color4) 10%,
+      var(--window-color4) 10%,
+      var(--window-color4) 90%
+    );
+}
+
+.fb2 {
+  width: 10%;
+  height: 40%;
+}
+
+.fb2a {
+  width: 100%;
+  border-bottom: 10vh solid var(--building-color3);
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+}
+
+.fb2b {
+  width: 100%;
+  height: 75%;
+  background-color: var(--building-color3);
+}
+
+.fb2-window {
+  width: 22%;
+  height: 100%;
+  background-color: var(--window-color3);
+}
+
+.fb3 {
+  width: 10%;
+  height: 35%;
+}
+  
+.fb3a {
+  width: 80%;
+  height: 15%;
+  background-color: var(--building-color1);
+}
+  
+.fb3b {
+  width: 100%;
+  height: 35%;
+  background-color: var(--building-color1);
+}
+
+.fb3-window {
+  width: 25%;
+  height: 80%;
+  background-color: var(--window-color1);
+}
+
+.fb4 {
+  width: 8%;
+  height: 45%;
+  position: relative;
+  left: 10%;
+}
+
+.fb4a {
+  border-top: 5vh solid transparent;
+  border-left: 8vw solid var(--building-color1);
+}
+
+.fb4b {
+  width: 100%;
+  height: 89%;
+  background-color: var(--building-color1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fb4-window {
+  width: 30%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: var(--window-color1);
+  margin: 10%;
+}
+
+.fb5 {
+  width: 10%;
+  height: 33%;
+  position: relative;
+  right: 10%;
+  background: repeating-linear-gradient(
+      var(--building-color2),
+      var(--building-color2) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2),
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    );
+}
+
+.fb6 {
+  width: 9%;
+  height: 38%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3),
+      var(--building-color3) 10%,
+      transparent 10%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      var(--building-color3),
+      var(--building-color3) 10%,
+      var(--window-color3) 10%,
+      var(--window-color3) 30%
+    );
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --building-color1: #000;
+    --building-color2: #000;
+    --building-color3: #000;
+    --building-color4: #000;
+    --window-color1: #777;
+    --window-color2: #777;
+    --window-color3: #777;
+    --window-color4: #777;
+  }
+  .sky {
+    background: radial-gradient(
+        closest-corner circle at 15% 15%,
+        #ccc,
+        #ccc 20%,
+        #445 21%,
+        #223 100%
+      );
+  }
+}
+    
+      
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <title>City Skyline</title>
+    <link href="styles.css" rel="stylesheet" />   
+  </head>
+
+  <body>
+    <div class="background-buildings sky">
+      <div></div>
+      <div></div>
+      <div class="bb1 building-wrap">
+        <div class="bb1a bb1-window"></div>
+        <div class="bb1b bb1-window"></div>
+        <div class="bb1c bb1-window"></div>
+        <div class="bb1d"></div>
+      </div>
+      <div class="bb2">
+        <div class="bb2a"></div>
+        <div class="bb2b"></div>
+      </div>
+      <div class="bb3"></div>
+      <div></div>
+      <div class="bb4 building-wrap">
+        <div class="bb4a"></div>
+        <div class="bb4b"></div>
+        <div class="bb4c window-wrap">
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+          <div class="bb4-window"></div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="foreground-buildings">
+      <div></div>
+      <div></div>
+      <div class="fb1 building-wrap">
+        <div class="fb1a"></div>
+        <div class="fb1b"></div>
+        <div class="fb1c"></div>
+      </div>
+      <div class="fb2">
+        <div class="fb2a"></div>
+        <div class="fb2b window-wrap">
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+          <div class="fb2-window"></div>
+        </div>
+      </div>
+      <div></div>
+      <div class="fb3 building-wrap">
+        <div class="fb3a window-wrap">
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+          <div class="fb3-window"></div>
+        </div>
+        <div class="fb3b"></div>
+        <div class="fb3a"></div>
+        <div class="fb3b"></div>
+      </div>
+      <div class="fb4">
+        <div class="fb4a"></div>
+        <div class="fb4b">
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+          <div class="fb4-window"></div>
+        </div>
+      </div>
+      <div class="fb5"></div>
+      <div class="fb6"></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
+      
