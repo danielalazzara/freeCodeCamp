@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AC Personal Training Studio</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <div class="logo-container">
+          <img  
+            id="header-img"
+            src="https://t3.ftcdn.net/jpg/03/76/06/08/360_F_376060885_G8bX8DQ4UFAqpaOAoT7G0xxZrvD05BxC.jpg" 
+            alt="logo" 
+          />
+          <span class="logo-name"> Personal Training Studio</span>
+          <ul class="nav-links">
+            <li ><a href="#About" class="nav-link">ABOUT</a></li>
+            <li ><a href="#Personal_trainers" class="nav-link">PERSONAL TRAINERS</a></li>
+            <li ><a href="#Contact" class="nav-link">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>  
+    </header>
+
+    <section id="title">
+      <h1 class="Title">Take Your Fitness
+To The Next Level</h1>
+    </section>
+
+    <section>
+      <h2>Please type here your e-mail address:</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" type="email"    placeholder="Please enter your email" name="email" required />
+        <input type="submit" id="submit" value="SUBMIT" />
+      </form>
+    </section>
+
+    <section>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYvGBVSZb3mjYGLmpxz5ulynVJUSX-mabw1A&usqp=CAU" alt="weights" width="418" />
+      <img src="https://media.architecturaldigest.com/photos/5e8610a986a09a0009065e1a/2:1/w_4200,h_2100,c_limit/20190822_Kasler_Nashville_09_Gym_008.jpg" alt="gym" width="555" />
+      <img src="https://www.thespruce.com/thmb/vAsg7QjNedjF9cOl4BawkypBWBE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/NW3-Gym-01-980x654-6dd93bd9f1fc47828bcb424622dbb2ea.jpg" alt="gym" width="415" />
+    </section>
+
+    <section id="About">
+      <h3>What we offer</h3>
+      <div class="About">
+        <p>Certified Personal Trainers</p>
+      </div>
+      <hr>
+      <div class="About">
+        <p>Personalized workout programs designed to effectively help you make progress</p>
+      </div>
+      </hr>
+      <hr>
+      <div class="About">
+        <p>High quality gym equipment for a full-body workout</p>
+      </div>
+      </hr>
+    </section>
+
+    <section>
+      <h3>Personal Trainers</h3>
+    </section>
+
+
+    <section id="Personal_trainers">
+      <div class="Personal_trainers">
+        <img src="https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg" alt="PT" width="250" />
+        <div>
+          <h2>Mark Green</h2>
+          <p>Dedicated fitness professional with a passion for improving client health, wellness and quality of life and with weight management expertise. Deliver high-energy training using the latest techniques in exercise science, cardio programs and strength training.
+          </p>
+        </div>
+      </div>
+      <div class="Personal_trainers">
+        <img src="https://assets.entrepreneur.com/content/3x2/2000/20190620131326-Example-of-Personal-Trainer-Business-Ideas-Bigstock-4000pxW-X-2670pxH-copy.jpeg" alt="PT" width="250" />
+        <div>
+          <h2>John Smith</h2>
+          <p>Spirited personal fitness trainer with weight management expertise and the ability to motivate others toward accomplishing weight loss goals. Designs classes to match the skill and learning levels of all participants. Skilled in personal program development and individual life and body assessments.
+          </p>
+        </div>
+      </div>
+      <div class="Personal_trainers">
+        <img src="https://www.k2crossfit.com/wp-content/uploads/2019/11/personal-1277392_1920.jpg" alt="PT" width="250" />
+        <div>
+          <h2>Mary Jane</h2>
+          <p>Effective personal trainer with over 10 years of experience helping
+clients achieve their health goals. Seeking to join a team of seasoned
+trainers at In-Shape to encourage, motivate, and shift perspectives on
+fitness, health, and wellness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact">
+      <iframe 
+        id="video"
+        width="698" 
+        height="297" 
+        margin-left="100"
+        margin-top="100"
+        src="https://www.youtube.com/embed/o3tNt84zxqo" 
+        title="Alex Parsons fitness personal trainer intro" frameborder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+    </section> 
+
+  </body>
+</html>
+
+:root {
+  --white: #ffffff;
+  --text-color: #b38600;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white)
+}
+
+#header-img {
+  width: 60px;
+  object-fit: contain;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-round;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 20px;
+  padding: 0 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Sans-Serif;
+  margin-left: 5px;
+}
+
+
+section::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+section {
+  margin: 40px 20px;
+}
+
+h1 {
+  color: var(--text-color); 
+  font-size: 80px;
+  text-align: center;
+  margin-top: 100px;
+  font-family: Sans-Serif;
+  font-weight: 550;
+}
+
+#email 
+{
+  margin-top: 15px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+h3 {
+  color: var(--text-color); 
+  font-size: 60px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: Sans-Serif;
+  font-weight: 550;
+}
+
+p {
+  font-style: Sans-sserif;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0.5px solid var(--text-color);
+  align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.image {
+  margin-right: 30px;
+}
+
+#Personal_trainers {
+  text-align: justify;
+  max-width: 1360px;
+  margin: auto;
+}
+
+.Personal_trainers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-family: Sans-sserif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 50px;
+  text-align: justify;
+}
+
+h2.Personal_trainers{
+  text-align: left;
+  font-family: Sans-sserif;
+  font-weight: 800;
+  font-size: 34px;
+  margin-left: 50px;
+}
+
+p.Personal_trainers {
+  text-align: justify;
+}
+
