@@ -69,30 +69,40 @@ To The Next Level</h1>
 
     <section id="Personal_trainers">
       <div class="Personal_trainers">
-        <img src="https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg" alt="PT" width="250" />
-        <div>
-          <h2>Mark Green</h2>
-          <p>Dedicated fitness professional with a passion for improving client health, wellness and quality of life and with weight management expertise. Deliver high-energy training using the latest techniques in exercise science, cardio programs and strength training.
-          </p>
+        <div class="grid">
+          <div class="image">
+            <img src="https://athleticsweekly.com/wp-content/uploads/2020/11/PT-image-via-OriGym.jpg" alt="PT" width="250" />
+          </div>
+          <div class="text">
+            <h2>Mark Green</h2>
+            <h5>Dedicated fitness professional with a passion for improving client health, wellness and quality of life and with weight management expertise. Deliver high-energy training using the latest techniques in exercise science, cardio programs and strength training.
+            </h5>
+          </div>
         </div>
-      </div>
-      <div class="Personal_trainers">
-        <img src="https://assets.entrepreneur.com/content/3x2/2000/20190620131326-Example-of-Personal-Trainer-Business-Ideas-Bigstock-4000pxW-X-2670pxH-copy.jpeg" alt="PT" width="250" />
-        <div>
-          <h2>John Smith</h2>
-          <p>Spirited personal fitness trainer with weight management expertise and the ability to motivate others toward accomplishing weight loss goals. Designs classes to match the skill and learning levels of all participants. Skilled in personal program development and individual life and body assessments.
-          </p>
+
+        <div class="grid">
+          <div class="image">
+            <img src="https://assets.entrepreneur.com/content/3x2/2000/20190620131326-Example-of-Personal-Trainer-Business-Ideas-Bigstock-4000pxW-X-2670pxH-copy.jpeg" alt="PT" width="250" />
+          </div>
+          <div class="text">
+            <h2>John Smith</h2>
+            <h5>Spirited personal fitness trainer with weight management expertise and the ability to motivate others toward accomplishing weight loss goals. Designs classes to match the skill and learning levels of all participants. Skilled in personal program development and individual life and body assessments.
+            </h5>
+          </div>
         </div>
-      </div>
-      <div class="Personal_trainers">
-        <img src="https://www.k2crossfit.com/wp-content/uploads/2019/11/personal-1277392_1920.jpg" alt="PT" width="250" />
-        <div>
-          <h2>Mary Jane</h2>
-          <p>Effective personal trainer with over 10 years of experience helping
+
+        <div class="grid">
+          <div class="image">
+            <img src="https://www.k2crossfit.com/wp-content/uploads/2019/11/personal-1277392_1920.jpg" alt="PT" width="250" />
+          </div>
+          <div class="text">
+            <h2>Mary Jane</h2>
+            <h5>Effective personal trainer with over 10 years of experience helping
 clients achieve their health goals. Seeking to join a team of seasoned
 trainers at In-Shape to encourage, motivate, and shift perspectives on
 fitness, health, and wellness.
-          </p>
+            </h5>
+          </div>
         </div>
       </div>
     </section>
@@ -110,6 +120,7 @@ fitness, health, and wellness.
 
   </body>
 </html>
+
 
 :root {
   --white: #ffffff;
@@ -133,8 +144,8 @@ body {
 
 #nav-bar {
   display: flex;
-  flex-direction: column;
-  justify-content: space-round;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -167,7 +178,6 @@ body {
   font-family: Sans-Serif;
   margin-left: 5px;
 }
-
 
 section::before {
   display: block;
@@ -208,6 +218,10 @@ input {
   }
 }
 
+h2 {
+  font-family: Sans-Serif;
+}
+
 h3 {
   color: var(--text-color); 
   font-size: 60px;
@@ -237,34 +251,30 @@ hr {
   margin-right: 30px;
 }
 
-#Personal_trainers {
-  text-align: justify;
-  max-width: 1360px;
-  margin: auto;
+.grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 3500px;
 }
 
 .Personal_trainers {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  margin: 20px;
-  font-family: Sans-sserif;
-  font-weight: 500;
-  font-size: 20px;
+  align-items: center;
+  width: 100%;
   margin-top: 30px;
-  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+h5 {
+  font-size: 20px;
   text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Sans-Serif;
+  font-weight: 550;
 }
-
-h2.Personal_trainers{
-  text-align: left;
-  font-family: Sans-sserif;
-  font-weight: 800;
-  font-size: 34px;
-  margin-left: 50px;
-}
-
-p.Personal_trainers {
-  text-align: justify;
-}
-
