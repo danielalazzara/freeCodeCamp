@@ -1,7 +1,7 @@
 # Step 60
-# Make the Est. 2020 text italicized by creating an established class selector and giving it the font-style property 
-# with the value italic.
+Make the Est. 2020 text italicized by creating an established class selector and giving it the font-style property with the value italic.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -41,10 +41,12 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
+```
 
 # Step 61
-# Now apply the established class to the Est. 2020 text.
+Now apply the established class to the Est. 2020 text.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -95,12 +97,12 @@ h1, h2 {
     </div>
   </body>
 </html>
+```
 
 # Step 62
-# The typography of heading elements (e.g. h1, h2) is set by default values of users' browsers.
-# Add two new type selectors (h1 and h2). Use the font-size property for both, but use the value 40px for the h1 
-# and 30px for the h2.
+The typography of heading elements (e.g. h1, h2) is set by default values of users' browsers. Add two new type selectors (h1 and h2). Use the font-size property for both, but use the value 40px for the h1 and 30px for the h2.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -149,10 +151,12 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
+```
 
 # Step 63
-# Add a footer element below the main element, where you can add some additional information.
+Add a footer element below the main element, where you can add some additional information.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -206,10 +210,11 @@ h1, h2 {
   </body>
 </html>
 
+```html
 # Step 64
-# Inside the footer, add a p element. Then, nest an anchor (a) element in the p that links to 
-# https://www.freecodecamp.org and has the text Visit our website.
+Inside the footer, add a p element. Then, nest an anchor (a) element in the p that links to https://www.freecodecamp.org and has the text Visit our website.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -265,20 +270,22 @@ h1, h2 {
     </div>
   </body>
 </html>
+```
 
 # Step 65
-# Add a second p element below the one with the link and give it the text 123 Free Code Camp Drive
+Add a second p element below the one with the link and give it the text 123 Free Code Camp Drive
 
+```html
         <p>
           <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
         </p>
         <p>123 Free Code Camp Drive</p>
+```
 
 # Step 66
-# You can use an hr element to display a divider between sections of different content.
-# First, add an hr element between the p element with the class established and the first section element. Note that 
-# hr elements are self closing.
+You can use an hr element to display a divider between sections of different content. First, add an hr element between the p element with the class established and the first section element. Note that hr elements are self closing.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -336,12 +343,12 @@ h1, h2 {
     </div>
   </body>
 </html>
+```
 
 # Step 67
-# The default properties of an hr element will make it appear as a thin light grey line. You can change the height 
-# of the line by specifying a value for the height property.
-# Change the height of the hr element to be 3px.
+The default properties of an hr element will make it appear as a thin light grey line. You can change the height of the line by specifying a value for the height property. Change the height of the hr element to be 3px.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -393,10 +400,12 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
+```
 
 # Step 68
-# Change the background color of the hr element to brown so it matches the color of the coffee beans.
+Change the background color of the hr element to brown so it matches the color of the coffee beans.
 
+```css
 hr {
   height: 3px;
   background-color: brown;
@@ -412,22 +421,23 @@ hr {
   background-color: brown;
   border-color: brown;
 }
+```
 
 # Step 70
-# Notice how the thickness of the line looks bigger? The default value of a property named border-width is 1px for
-# all edges of hr elements. By changing the border to the same color as the background, the total height of the line 
-# is 5px (3px plus the top and bottom border width of 1px).
-# Change the height property of the hr to be 2px, so the total height of it becomes 4px.
+# Notice how the thickness of the line looks bigger? The default value of a property named border-width is 1px for all edges of hr elements. By changing the border to the same color as the background, the total height of the line is 5px (3px plus the top and bottom border width of 1px). Change the height property of the hr to be 2px, so the total height of it becomes 4px.
 
+```css
 hr {
   height: 2px;
   background-color: brown;
   border-color: brown;
 }
+```
 
 # Step 71
-# Go ahead and add another hr element between the main element and the footer element.
+Go ahead and add another hr element between the main element and the footer element.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -486,21 +496,23 @@ hr {
     </div>
   </body>
 </html>
+```
 
 # Step 72
-# To create a little more room around the menu, add 20px of space on the inside of the body element by using the 
-# padding property.
+To create a little more room around the menu, add 20px of space on the inside of the body element by using the padding property.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
   padding: 20px;
 }
+```
 
 # Step 73
-# Focusing on the menu items and prices, there is a fairly large gap between each line.
-# Target all the p elements nested in elements with the class named item and set their top and bottom margin to be 5px.
+Focusing on the menu items and prices, there is a fairly large gap between each line. Target all the p elements nested in elements with the class named item and set their top and bottom margin to be 5px.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -557,23 +569,24 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
+```
 
 # Step 74
-# Using the same style selector in the previous step, make the font size of the items and prices larger by using a 
-# value of 18px.
+Using the same style selector in the previous step, make the font size of the items and prices larger by using a value of 18px.
 
+```css
 .item p {
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 18px;
 }
+```
 
 # Step 75
-# Changing the margin-bottom to 5px looks great. However, now the space between the Cinnamon Roll menu item and the 
-# second hr element does not match the space between the top hr element and the Coffee heading.
-# Add some more space by creating a class named bottom-line using 25px for the margin-top property.
+Changing the margin-bottom to 5px looks great. However, now the space between the Cinnamon Roll menu item and the second hr element does not match the space between the top hr element and the Coffee heading. Add some more space by creating a class named bottom-line using 25px for the margin-top property.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -635,10 +648,12 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
+```
 
 # Step 76
-# Now add the bottom-line class to the second hr element so the styling is applied.
+Now add the bottom-line class to the second hr element so the styling is applied.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -697,11 +712,12 @@ h1, h2 {
     </div>
   </body>
 </html>
+```
 
 # Step 77
-# Next you are going to be styling the footer element. To keep the CSS organized, add a comment at the end of 
-# styles.css with the text FOOTER.
+Next you are going to be styling the footer element. To keep the CSS organized, add a comment at the end of styles.css with the text FOOTER.
 
+```css
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
@@ -763,5 +779,4 @@ h1, h2 {
   text-align: right;
   width: 25%
 }
-
-/*FOOTER*/
+```
