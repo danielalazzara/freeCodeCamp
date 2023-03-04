@@ -209,8 +209,8 @@ Add a footer element below the main element, where you can add some additional i
     </div>
   </body>
 </html>
+```
 
-```html
 # Step 64
 Inside the footer, add a p element. Then, nest an anchor (a) element in the p that links to https://www.freecodecamp.org and has the text Visit our website.
 
