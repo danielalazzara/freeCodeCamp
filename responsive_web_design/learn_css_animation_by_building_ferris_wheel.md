@@ -120,7 +120,7 @@ Give the .line selector a transform-origin property of 0% 0%. This will offset t
 ```
 
 # Step 9
-# Create a selector to target your second .line element. Set the transform property to rotate(60deg). Remember that the transform property allows you to manipulate the shape of an element. In this case, using the rotate(60deg) value will rotate the element around its transform-origin point by 60 degrees clockwise.
+Create a selector to target your second .line element. Set the transform property to rotate(60deg). Remember that the transform property allows you to manipulate the shape of an element. In this case, using the rotate(60deg) value will rotate the element around its transform-origin point by 60 degrees clockwise.
 
 ```css
 .line:nth-of-type(2)  {
@@ -353,7 +353,7 @@ Set the animation property of the .cabin rule to cabins 10s linear infinite. Thi
 ```
 
 # Step 24
-# To make your cabin animation seem more like a natural swinging motion, you can use the ease-in-out timing function. This setting will tell the animation to start and end at a slower pace, but move more quickly in the middle of the cycle. Replace linear to ease-in-out in the .cabin selector.
+To make your cabin animation seem more like a natural swinging motion, you can use the ease-in-out timing function. This setting will tell the animation to start and end at a slower pace, but move more quickly in the middle of the cycle. Replace linear to ease-in-out in the .cabin selector.
 
 ```css
 .cabin {
