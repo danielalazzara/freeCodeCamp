@@ -261,6 +261,7 @@ Instead of a series of coding challenges, people will be in their code editor pa
           Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
         </p>
       </section>
+```
 
 # Step 18
 Below your .text element, create a new section element and give it a class of text text-with-images. Within that, create an article element with a class set to brief-history, and an aside element with the class set to image-wrapper.
