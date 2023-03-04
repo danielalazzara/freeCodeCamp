@@ -1,15 +1,16 @@
 # Step 55
-# To make the first section look more inline, target only the input elements within .info elements, and set their width to 50%, and left-align 
-# their text.
-              
- .info input{
-   width: 50%;
-   text-align: left;
- }              
-              
+To make the first section look more inline, target only the input elements within .info elements, and set their width to 50%, and left-align their text.
+ 
+```css 
+.info input{
+  width: 50%;
+  text-align: left;
+}              
+```              
 # Step 56
-# Target all label elements within .info elements, and set their width to 10%, and make it so they do not take up less than 55px.
-              
+Target all label elements within .info elements, and set their width to 10%, and make it so they do not take up less than 55px.
+
+```css
 .info input {
   width: 50%;
   text-align: left;
@@ -19,12 +20,12 @@
   width: 10%;
   min-width: 55px;
 }              
-              
-# Step 57
-# To align the input boxes with each other, create a new ruleset that targets all input and label elements within an .info element and set the 
-# display property to inline-block.
-# Also, align the label element's text to the right.
+```
 
+# Step 57
+To align the input boxes with each other, create a new ruleset that targets all input and label elements within an .info element and set the display property to inline-block. Also, align the label element's text to the right.
+
+```css
 .info input, .info label {
   display: inline-block;
 }
@@ -39,15 +40,20 @@
   min-width: 55px;
   text-align: right;
 }
+```
 
 # Step 58
-# To neaten the .question-block elements, set the following CSS properties:
-# text-align: left;
-# display: block;
-# width: 100%;
-# margin-top: 20px;
-# padding-top: 5px;
+To neaten the .question-block elements, set the following CSS properties:
 
+```css
+text-align: left;
+display: block;
+width: 100%;
+margin-top: 20px;
+padding-top: 5px;
+```
+
+```css
 .question-block {
   text-align: left;
   display: block;
@@ -55,46 +61,58 @@
   margin-top: 20px;
   padding-top: 5px;
 }
+```
 
 # Step 59
-# Make the paragraph elements appear as a higher priority, with the following CSS properties:
-# margin-top: 5px;
-# padding-left: 15px;
-# font-size: 20px;
+Make the paragraph elements appear as a higher priority, with the following CSS properties:
 
+```css
+margin-top: 5px;
+padding-left: 15px;
+font-size: 20px;
+```
+
+```css
 p {
   margin-top: 5px;
   padding-left: 15px;
   font-size: 20px;
 }
+```
 
 # Step 60
-# It is useful to see the default border around the fieldset elements, during development. However, it might not be the style you want.
-# Remove the border and bottom padding on the .question elements.
+It is useful to see the default border around the fieldset elements, during development. However, it might not be the style you want. Remove the border and bottom padding on the .question elements.
 
+```css
 .question {
   border: none;
   padding-bottom: 0;
 }
+```
 
 # Step 61
-# Remove the default styling for the list items of .answers-list, and remove the unordered list padding.
+Remove the default styling for the list items of .answers-list, and remove the unordered list padding.
 
+```css
  .answers-list {
    list-style: none;
    padding: 0;
  }
+```
 
 # Step 62
-# Give the submit button a freeCodeCamp-style design, with the following CSS properties:
-# display: block;
-# margin: 40px auto;
-# width: 40%;
-# padding: 15px;
-# font-size: 23px;
-# background: #d0d0d5;
-# border: 3px solid #3b3b4f;
+Give the submit button a freeCodeCamp-style design, with the following CSS properties:
 
+```css
+display: block;
+margin: 40px auto;
+width: 40%;
+padding: 15px;
+font-size: 23px;
+background: #d0d0d5;
+border: 3px solid #3b3b4f;
+```
+```css
 button {
   display: block;
   margin: 40px auto;
@@ -104,68 +122,83 @@ button {
   background: #d0d0d5;
   border: 3px solid #3b3b4f;
 }
+```
 
 # Step 63
-# Set the footer background color to #2a2a40, and use Flexbox to horizontally center the text.
+Set the footer background color to #2a2a40, and use Flexbox to horizontally center the text.
 
+```css
 footer {
   background-color: #2a2a40;
   display: flex;
   justify-content: center;
 }
+```
 
 # Step 64
-# Now, we cannot read the text. Target the footer and the anchor element within to set the font color to a color of adequate contrast ratio.
+Now, we cannot read the text. Target the footer and the anchor element within to set the font color to a color of adequate contrast ratio.
 
+```css
 footer, footer a {
   color: #dfdfe2;
 }
+```
 
 # Step 65
-# Horizontally center all the text within the address element, and add some padding.
+Horizontally center all the text within the address element, and add some padding.
 
+```css
 address {
   text-align: center;
   padding: 0.3em;
 }
+```
 
 # Step 66
-# Clicking on the navigation links should jump the viewport to the relevant section. However, this jumping can be disorienting for some users.
-# Select all elements, and set the scroll-behavior to smooth.
+Clicking on the navigation links should jump the viewport to the relevant section. However, this jumping can be disorienting for some users. Select all elements, and set the scroll-behavior to smooth.
 
+```css
 * {
   scroll-behavior: smooth;
 }
+```
 
 # Step 67
-# Certain types of motion-based animations can cause discomfort for some users. In particular, people with vestibular disorders have sensitivity 
-# to certain motion triggers.
-# The @media at-rule has a media feature called prefers-reduced-motion to set CSS based on the user's preferences. It can take one of the 
-# following values:
-# reduce
-# no-preference
-# @media (feature: value) {
-#   selector {
-#     styles
-#   }
-# }
-# Wrap the style rule that sets scroll-behavior: smooth within an @media at-rule with the media feature prefers-reduced-motion having no-preference
-# set as the value.
+Certain types of motion-based animations can cause discomfort for some users. In particular, people with vestibular disorders have sensitivity to certain motion triggers.
+The @media at-rule has a media feature called prefers-reduced-motion to set CSS based on the user's preferences. It can take one of the following values:
 
+```css
+reduce
+no-preference
+@media (feature: value) {
+  selector {
+    styles
+  }
+}
+```
+
+Wrap the style rule that sets scroll-behavior: smooth within an @media at-rule with the media feature prefers-reduced-motion having no-preference set as the value.
+
+```css
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
   }
 }
+```
 
 # Step 68
-# Finally, the navigation accessibility can be improved by providing keyboard shortcuts.
-# The accesskey attribute accepts a space-separated list of access keys. For example:
-# <button type="submit" accesskey="s">Submit</button>
-# Give each of the navigation links a single-letter access key.
-# Note: It is not always advised to use access keys, but they can be useful
-# Well done. You have completed the Accessibility Quiz practice project.
+Finally, the navigation accessibility can be improved by providing keyboard shortcuts. The accesskey attribute accepts a space-separated list of access keys. For example:
 
+```html
+<button type="submit" accesskey="s">Submit</button>
+```
+
+Give each of the navigation links a single-letter access key.
+Note: It is not always advised to use access keys, but they can be useful
+Well done. You have completed the Accessibility Quiz practice project.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -181,12 +214,9 @@ address {
       <h1>HTML/CSS Quiz</h1>
       <nav>
         <ul>
-          <li><a href="#student-info" <button type="submit" accesskey="s">Submit</button>
->INFO</a></li>
-          <li><a href="#html-questions" <button type="submit" accesskey="h">Submit</button>
->HTML</a></li>
-          <li><a href="#css-questions" <button type="submit" accesskey="c">Submit</button>
->CSS</a></li>
+          <li><a href="#student-info" <button type="submit" accesskey="s">Submit</button>INFO</a></li>
+          <li><a href="#html-questions" <button type="submit" accesskey="h">Submit</button>HTML</a></li>
+          <li><a href="#css-questions" <button type="submit" accesskey="c">Submit</button>CSS</a></li>
         </ul>
       </nav>
     </header>
@@ -290,8 +320,9 @@ address {
     </footer>
   </body>
 </html>
+```
 
-
+```css
 @media (prefers-reduced-motion: no-preference) {
   * {
     scroll-behavior: smooth;
@@ -477,3 +508,4 @@ address {
   white-space: nowrap;
   border: 0;
 }
+```
