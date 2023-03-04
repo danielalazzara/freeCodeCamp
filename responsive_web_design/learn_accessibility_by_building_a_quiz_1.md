@@ -652,7 +652,7 @@ Add an id to all of your radio inputs so you can link your labels to them. Give 
 </html>
 ```
 
-Step 31
+# Step 31
 Although not required for label elements with a nested input, it is still best-practice to explicitly link a label with its corresponding input element.
 Now, add a for attribute to each of your four labels that links the label to its corresponding radio input.
 
