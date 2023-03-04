@@ -741,7 +741,7 @@ Your .text element is not a CSS Grid, but you can create columns within an eleme
 ```
 
 # Step 57
-# Magazines often use justified text in their printed content to structure their layout and control the flow of their content. While this works in printed form, justified text on websites can be an accessibility concern, for example presenting challenges for folks with dyslexia. To make your project look like a printed magazine, give the .text selector a text-align property set to justify.
+Magazines often use justified text in their printed content to structure their layout and control the flow of their content. While this works in printed form, justified text on websites can be an accessibility concern, for example presenting challenges for folks with dyslexia. To make your project look like a printed magazine, give the .text selector a text-align property set to justify.
 
 ```css
 .text {
