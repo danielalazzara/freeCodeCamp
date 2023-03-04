@@ -111,7 +111,7 @@ Within the header, provide context about the page by nesting one img, h1, and na
 A useful property of an SVG (scalable vector graphics) is that it contains a path attribute which allows the image to be scaled without affecting the resolution of the resultant image.
 Currently, the img is assuming its default size, which is too large. Correctly, scale the image using it's id as a selector, and setting the width to max(100px, 18vw).
 
-```html
+```css
 #logo {
   width: max(100px, 18vw);
 }
@@ -121,7 +121,7 @@ Currently, the img is assuming its default size, which is too large. Correctly, 
 As described in the freeCodeCamp Style Guide, the logo should retain an aspect ratio of 35 / 4, and have padding around the text.
 First, change the background-color to #0a0a23 so you can see the logo. Then, use the aspect-ratio property to set the desired aspect ratio to 35 / 4. Finally, add a padding of 0.4rem all around.
 
-```html
+```css
 #logo {
   width: max(100px, 18vw);
   background-color: #0a0a23;
@@ -133,7 +133,7 @@ First, change the background-color to #0a0a23 so you can see the logo. Then, use
 # Step 10
 Make the header take up the full width of its parent container, set its height to 50px, and set the background-color to #1b1b32. Then, set the display to use Flexbox.
 
-```html
+```css
 header {
   height: 50px;
   width: 100%;
@@ -145,7 +145,7 @@ header {
 # Step 11
 Change the h1 font color to #f1be32, and set the font size to min(5vw, 1.2em).
 
-```html
+```css
 h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em);
@@ -172,7 +172,7 @@ The list items text should be wrapped in anchor tags.
 # Step 13
 Target unordered list elements within nav elements, and use Flexbox to evenly space the children.
 
-```html
+```css
 nav > ul {
   justify-content: space-evenly;
   display: flex;
@@ -256,7 +256,7 @@ Then, within each section element, nest one h2 element with an id matching the c
 Typeface plays an important role in the accessibility of a page. Some fonts are easier to read than others, and this is especially true on low-resolution screens.
 Change the font for both the h1 and h2 elements to Verdana, and use another web-safe font in the sans-serif family as a fallback. Also, add a border-bottom of 4px solid #dfdfe2 to h2 elements to make the sections distinct.
 
-```html
+```css
 h1, h2 {
   font-family: Verdana Tahoma;
 }
@@ -373,7 +373,7 @@ Within the span element, add the text (Date of Birth).
 # Step 25
 The .sr-only text is still visible. There is a common pattern to visually hide text for only screen readers to read. This pattern is to set the following CSS properties:
 
-```html
+```css
 position: absolute;
 width: 1px;
 height: 1px;
@@ -387,7 +387,7 @@ border: 0;
 
 Use the above to define the sr-only class.
 
-```html
+```css
 .sr-only {
   position: absolute;
 width: 1px;
