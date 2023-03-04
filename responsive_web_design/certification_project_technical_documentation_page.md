@@ -1,3 +1,5 @@
+# html file
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,7 +104,10 @@
     </main>
   </body>
 </html>
-
+```
+  
+# css file
+```css
 html {
   font-family: 'Open Sans', sans-serif;
   color: white;   background-color: black;
@@ -123,3 +128,4 @@ header {
     scroll-behavior: smooth;
   }
 }
+```
