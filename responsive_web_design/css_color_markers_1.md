@@ -108,7 +108,7 @@ Nest a link element within the head. Give it a rel attribute set to stylesheet a
 Now that your external CSS file is set up, you can start styling the page.
 As a reminder, here's how to target a paragraph element and align it to the right:
 
-```html
+```css
 p {
   text-align: right;
 }
@@ -116,7 +116,7 @@ p {
 
 Create a new CSS rule that targets the h1 element, and set its text-align property to center.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -168,7 +168,7 @@ Next, within the div, add another div element and give it a class of marker.
 It's time to add some color to the marker. Remember that one way to add color to an element is to use a color keyword like black, cyan, or yellow.
 As a reminder, here's how to target the class freecodecamp:
 
-```html
+```css
 .freecodecamp {
 
 }
@@ -176,7 +176,7 @@ As a reminder, here's how to target the class freecodecamp:
 Create a new CSS rule that targets the class marker, and set its background-color property to red.
 Note: You will not see any changes after adding the CSS.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -190,7 +190,7 @@ h1 {
 The background color was applied, but since the marker div element is empty, it doesn't have any height by default.
 In your .marker CSS rule, set the height property to 25px and the width property to 200px
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -207,7 +207,7 @@ Your marker would look better if it was centered on the page. An easy way to do 
 In the last project, you set the margin area of elements separately with properties like margin-top and margin-left. The margin shorthand property makes it easy to set multiple margin areas at the same time.
 To center your marker on the page, set its margin property to auto. This sets margin-top, margin-right, margin-bottom, and margin-left all to auto.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -252,7 +252,7 @@ While you have three separate marker div elements, they look like one big rectan
 When the shorthand margin property has two values, it sets margin-top and margin-bottom to the first value, and margin-left and margin-right to the second value.
 In your .marker CSS rule, set the margin property to 10px auto.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -300,7 +300,7 @@ To begin, add the class one to the first marker div element.
 # Step 17
 Next, remove the background-color property and its value from the .marker CSS rule.
 
-```html  
+```css  
 h1 {
   text-align: center;
 }
@@ -315,7 +315,7 @@ h1 {
 # Step 18
 Then, create a new CSS rule that targets the class one and set its background-color property to red.
 
-```html  
+```css  
 h1 {
   text-align: center;
 }
@@ -360,7 +360,7 @@ Add the class two to the second marker div, and the class three to the third mar
 # Step 20
 Create a CSS rule that targets the class two and set its background-color property to green. Also, create a separate CSS rule that targets the class three and set its background-color to blue.
 
-```html  
+```css 
 h1 {
   text-align: center;
 }
@@ -388,7 +388,7 @@ There are two main color models: the additive RGB (red, green, blue) model used 
 In this project, you'll work with the RGB model. This means that colors begin as black, and change as different levels of red, green, and blue are introduced. An easy way to see this is with the CSS rgb function.
 Create a new CSS rule that targets the class container and set its background-color to black with rgb(0, 0, 0).
 
-```html  
+```css  
 h1 {
   text-align: center;
 }
@@ -419,13 +419,13 @@ h1 {
 # Step 22
 A function is a piece of code that can take an input and perform a specific action. The CSS rgb function accepts values, or arguments, for red, green, and blue, and produces a color:
 
-```html
+```css
 rgb(red, green, blue);
 ```
 
 Each red, green, and blue value is a number from 0 to 255. 0 means that there's 0% of that color, and is black. 255 means that there's 100% of that color. In the .one CSS rule, replace the color keyword red with the rgb function. For the rgb function, set the value for red to 255, the value for green to 0, and the value for blue to 0.
   
-```html  
+```css 
 h1 {
   text-align: center;
 }
@@ -458,7 +458,7 @@ Notice that the background-color for your marker is still red. This is because y
 Now use the rgb function to set the other colors.
 In the .two CSS rule, use the rgb function to set the background-color to the max value for green, and 0 for the other values. And in the .three CSS rule, use the rgb function to set the background-color to the max value for blue, and 0 for the other values.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -490,7 +490,7 @@ h1 {
 While the red and blue markers look the same, the green one is much lighter than it was before. This is because the green color keyword is actually a darker shade, and is about halfway between black and the maximum value for green.
 In the .two CSS rule, set the green value in the rgb function to 127 to lower its intensity.
 
-```html
+```css
 .two {
   background-color: rgb(0, 127, 0);
 }
@@ -500,7 +500,7 @@ In the .two CSS rule, set the green value in the rgb function to 127 to lower it
 Now add a little more vertical space between your markers and the edge of the container element they're in.
 In the .container CSS rule, use the shorthand padding property to add 10px of top and bottom padding, and set the left and right padding to 0. This works similarly to the shorthand margin property you used earlier.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -533,7 +533,7 @@ h1 {
 In the additive RGB color model, primary colors are colors that, when combined, create pure white. But for this to happen, each color needs to be at its highest intensity.
 Before you combine colors, set your green marker back to pure green. For the rgb function in the .two CSS rule, set green back to the max value of 255.
 
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -566,7 +566,7 @@ h1 {
 Now that you have the primary RGB colors, it's time to combine them.
 For the rgb function in the .container rule, set the red, green, and blue values to the max of 255.
   
-```html
+```css
 h1 {
   text-align: center;
 }
@@ -599,7 +599,7 @@ h1 {
 Secondary colors are the colors you get when you combine primary colors. You might have noticed some secondary colors in the last step as you changed the red, green, and blue values.
 To create the first secondary color, yellow, update the rgb function in the .one CSS rule to combine pure red and pure green.
   
-```html  
+```css
 .one {
   background-color: rgb(255, 255, 0);
 }
