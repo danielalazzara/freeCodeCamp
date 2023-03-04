@@ -755,7 +755,7 @@ Next, you are going to add some new form input elements, so add another fieldset
 # Step 53
 Add a legend element with the text What's your cat's personality? inside the second fieldset element.
 
-```html</li>
+```html
           <fieldset>
             <legend>Is your cat an indoor or outdoor cat?</legend>
             <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
