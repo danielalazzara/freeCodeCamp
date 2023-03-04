@@ -1,15 +1,16 @@
 # Step 1
-# As you've seen in the previous projects, webpages should start with a DOCTYPE html declaration, followed by an html
-# element.
-# Add a DOCTYPE html declaration at the top of the document, and an html element after that. Give the html element a 
-# lang attribute with en as its value.
+As you've seen in the previous projects, webpages should start with a DOCTYPE html declaration, followed by an html element.
+Add a DOCTYPE html declaration at the top of the document, and an html element after that. Give the html element a lang attribute with en as its value.
 
+```html
 <!DOCTYPE html>
 <html lang="en"></html>
+```
 
 # Step 2
-# Nest a head element within the html element. Just after the head element, add a body element.
+Nest a head element within the html element. Just after the head element, add a body element.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,12 +18,13 @@
   <body>
   </body>
 </html>
+```
 
 # Step 3
-# Remember that the title element gives search engines extra information about the page. It also tells browsers what 
-# text to display in the title bar when the page is open, and on the tab for the page.
-# Within the head element, nest a title element with the text Colored Markers.
+Remember that the title element gives search engines extra information about the page. It also tells browsers what text to display in the title bar when the page is open, and on the tab for the page.
+Within the head element, nest a title element with the text Colored Markers.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,13 +33,13 @@
   <body>
   </body>
 </html>
+```
 
 # Step 4
-# To tell browsers how to encode characters on your page, set the charset to utf-8. utf-8 is a universal character 
-# set that includes almost every character from all human languages.
-# Inside the head element, nest a meta element with the attribute charset set to utf-8. Remember that meta elements 
-# are self-closing, and do not need a closing tag.
+To tell browsers how to encode characters on your page, set the charset to utf-8. utf-8 is a universal character set that includes almost every character from all human languages.
+Inside the head element, nest a meta element with the attribute charset set to utf-8. Remember that meta elements are self-closing, and do not need a closing tag.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,11 +49,12 @@
   <body>
   </body>
 </html>
+```
 
 # Step 5
-# Add another self-closing meta element within the head. Give it a name attribute set to viewport and a content 
-# attribute set to width=device-width, initial-scale=1.0 so your page looks the same on all devices.
+Add another self-closing meta element within the head. Give it a name attribute set to viewport and a content attribute set to width=device-width, initial-scale=1.0 so your page looks the same on all devices.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -62,11 +65,13 @@
   <body>
   </body>
 </html>
+```
 
 # Step 6
-# Now you're ready to start adding content to the page.
-# Within the body, nest an h1 element with the text CSS Color Markers.
+Now you're ready to start adding content to the page.
+Within the body, nest an h1 element with the text CSS Color Markers.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,13 +83,13 @@
     <h1>CSS Color Markers</h1>
   </body>
 </html>
+```
 
 # Step 7
-# In this project you'll work with an external CSS file to style the page. We've already created a styles.css file 
-# for you. But before you can use it, you'll need to link it to the page.
-# Nest a link element within the head. Give it a rel attribute set to stylesheet and an href attribute set to 
-# styles.css.
+In this project you'll work with an external CSS file to style the page. We've already created a styles.css file for you. But before you can use it, you'll need to link it to the page.
+Nest a link element within the head. Give it a rel attribute set to stylesheet and an href attribute set to styles.css.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,25 +102,29 @@
     <h1>CSS Color Markers</h1>
   </body>
 </html>
-
+```
 
 # Step 8
-# Now that your external CSS file is set up, you can start styling the page.
-# As a reminder, here's how to target a paragraph element and align it to the right:
-# p {
-#   text-align: right;
-# }
-# Create a new CSS rule that targets the h1 element, and set its text-align property to center.
+Now that your external CSS file is set up, you can start styling the page.
+As a reminder, here's how to target a paragraph element and align it to the right:
+```html
+p {
+  text-align: right;
+}
+```
+Create a new CSS rule that targets the h1 element, and set its text-align property to center.
 
+```html
 h1 {
   text-align: center;
 }
+```
 
 # Step 9
-# Now you'll add some elements that you'll eventually style into color markers.
-# First, within the body, add a div element and set its class attribute to container. Make sure the div element is 
-# below the h1 element.
+Now you'll add some elements that you'll eventually style into color markers.
+First, within the body, add a div element and set its class attribute to container. Make sure the div element is below the h1 element.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -129,6 +138,7 @@ h1 {
     <div class="container"></div>
   </body>
 </html>
+```
 
 # Step 10
 # Next, within the div, add another div element and give it a class of marker.
