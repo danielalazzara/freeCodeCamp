@@ -1,3 +1,6 @@
+# html file
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <main id="main">
@@ -14,8 +17,11 @@
     </figure>
   </main>
 </html>
+```
 
+css file
 
+```css
 * {
   padding: 0;
   margin: 0;
@@ -55,3 +61,4 @@ main {
 figcaption {
   text-align: center;
 }
+```
