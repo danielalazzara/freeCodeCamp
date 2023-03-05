@@ -124,7 +124,7 @@ Give your .label selector a margin property set to 20px auto, and a padding prop
 }
 ```
 
-Step 11
+# Step 11
 If you inspect your .label element with your browser's developer tools, you may notice that it's actually 288 pixels wide instead of 270. This is because, by default, the browser includes the border and padding when determining an element's size. To solve this, reset the box model by creating a * selector and giving it a box-sizing property of border-box.
 
 ```css
