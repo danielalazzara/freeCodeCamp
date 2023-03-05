@@ -155,10 +155,12 @@ Remember that the use of h1, h2, and similar tags determine the semantic structu
 h1 {
   font-weight: 800;
 }
+```
 
 # Step 13
 Give your h1 selector a text-align property of center.
 
+```css
 h1 {
   font-weight: 800;
   text-align: center;
