@@ -1,3 +1,6 @@
+# html file
+
+```htnl
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,8 +60,9 @@
 </html>
 
 
+# css file
 
-
+```css
 body {
   width: 100%;
   height:100vh;
@@ -72,3 +76,4 @@ fieldset {
   padding: 2rem 0;
   border-bottom: 3px solid #3b3b4f;
 }
+```
