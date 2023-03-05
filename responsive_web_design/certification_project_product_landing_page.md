@@ -1,3 +1,6 @@
+html file
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,10 +100,7 @@ To The Next Level</h1>
           </div>
           <div class="text">
             <h2>Mary Jane</h2>
-            <h5>Effective personal trainer with over 10 years of experience helping
-clients achieve their health goals. Seeking to join a team of seasoned
-trainers at In-Shape to encourage, motivate, and shift perspectives on
-fitness, health, and wellness.
+            <h5>Effective personal trainer with over 10 years of experience helping clients achieve their health goals. Seeking to join a team of seasoned trainers at In-Shape to encourage, motivate, and shift perspectives on fitness, health, and wellness.
             </h5>
           </div>
         </div>
@@ -120,8 +120,10 @@ fitness, health, and wellness.
 
   </body>
 </html>
+```
+# css file
 
-
+```css
 :root {
   --white: #ffffff;
   --text-color: #b38600;
@@ -278,3 +280,4 @@ h5 {
   font-family: Sans-Serif;
   font-weight: 550;
 }
+```
