@@ -409,10 +409,12 @@ Create a new .large selector and give it a height property set to 10px. Also cre
 .large, .medium {
   background-color:black;
 }
+```
 
 # Step 28
 You may notice there is still a small border at the bottom of your .large element. To reset this, give your .large, .medium selector a border property set to 0. Note: the medium(medium) class will be utilized in step 37 for the thinner bars of the nutrition label.
 
+```css
 .large, .medium {
   background-color: black;
   border: 0;
