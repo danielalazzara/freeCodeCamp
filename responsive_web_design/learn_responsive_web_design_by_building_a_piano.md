@@ -1,3 +1,45 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>Table of Contents</summary>
+
+- [Step 1](#step-1)
+- [Step 2](#step-2)
+- [Step 3](#step-3)
+- [Step 4](#step-4)
+- [Step 5](#step-5)
+- [Step 6](#step-6)
+- [Step 7](#step-7)
+- [Step 8](#step-8)
+- [Step 9](#step-9)
+- [Step 10](#step-10)
+- [Step 11](#step-11)
+- [Step 12](#step-12)
+- [Step 13](#step-13)
+- [Step 14](#step-14)
+- [Step 15](#step-15)
+- [Step 16](#step-16)
+- [Step 17](#step-17)
+- [Step 18](#step-18)
+- [Step 19](#step-19)
+- [Step 20](#step-20)
+- [Step 21](#step-21)
+- [Step 22](#step-22)
+- [Step 23](#step-23)
+- [Step 24](#step-24)
+- [Step 25](#step-25)
+- [Step 26](#step-26)
+- [Step 27](#step-27)
+- [Step 28](#step-28)
+- [Step 29](#step-29)
+- [Step 30](#step-30)
+- [Step 31](#step-31)
+- [Step 32](#step-32)
+- [Step 33](#step-33)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Step 1
 Begin with the basic HTML structure. Add a DOCTYPE declaration and html, head, body, and title elements. Set the language of this page to English. Set the title to Piano.
 
