@@ -4,7 +4,7 @@
 <summary>Table of Contents</summary>
 
 - [freeCodeCamp](#freecodecamp)
-  - [Scientific Computing with Python Certification](#scientific-computing-with-python-certification)
+  - [Scientific Computing with Python](#scientific-computing-with-python)
   - [Responsive Web Design](#responsive-web-design)
 
 </details>
