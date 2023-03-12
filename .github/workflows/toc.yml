@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: technote-space/toc-generator@v4
         with:
-          TARGET_PATHS: responsive_web_design/css_color_markers.md
+          TARGET_PATHS: responsive_web_design/*.md
           FOLDING: true
       
