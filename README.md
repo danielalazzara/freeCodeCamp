@@ -14,7 +14,7 @@
 My freeCodeCamp curriculum 
 
 ## Scientific Computing with Python Certification 
-- [Scientific_Computing_with_Python_Certification](Scientific_Computing_with_Python_Certification/)
+- [scientific_computing_with_python_certification](scientific_computing_with_python_certification/)
 - Link to freeCodeCamp: https://www.freecodecamp.org/learn/scientific-computing-with-python
 
 ## Responsive Web Design
