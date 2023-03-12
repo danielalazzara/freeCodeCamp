@@ -14,9 +14,9 @@
 My freeCodeCamp curriculum 
 
 ## Scientific Computing with Python Certification 
-- [scientific_computing_with_python_certification](scientific_computing_with_python_certification/)
+- [scientific_computing_with_python_certification](scientific_computing_with_python_certification)
 - Link to freeCodeCamp: https://www.freecodecamp.org/learn/scientific-computing-with-python
 
 ## Responsive Web Design
-- [responsive_web_design](responsive_web_design/)
+- [responsive_web_design](responsive_web_design)
 - Link to freeCodeCamp: https://www.freecodecamp.org/learn/2022/responsive-web-design/
