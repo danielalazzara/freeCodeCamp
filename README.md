@@ -20,3 +20,7 @@ My freeCodeCamp curriculum
 ## Responsive Web Design
 - [responsive_web_design](responsive_web_design/)
 - Link to freeCodeCamp: https://www.freecodecamp.org/learn/2022/responsive-web-design/
+
+## JavaScript Algorithms and Data Structures
+- [javascript_algorithms_and_data_structures](javascript_algorithms_and_data_structures)
+- Link to freeCodeCamp: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures
