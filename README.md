@@ -6,6 +6,7 @@
 - [freeCodeCamp](#freecodecamp)
   - [Scientific Computing with Python](#scientific-computing-with-python)
   - [Responsive Web Design](#responsive-web-design)
+  - [JavaScript Algorithms and Data Structures](#javascript-algorithms-and-data-structures)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
