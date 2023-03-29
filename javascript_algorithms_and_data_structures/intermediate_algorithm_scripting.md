@@ -153,6 +153,356 @@ For example, for the input GCG, return [["G", "C"], ["C","G"], ["G", "C"]]
 
 The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
+```
+function pairElement(str) {
+  const pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C"
+  };
 
+  return str
+    .split("")
+    .map(x => [x, pairs[x]]);  
+}
 
+pairElement("GCG");
+```
 
+# Missing letters
+
+Find the missing letter in the passed letter range and return it.
+
+If all letters are present in the range, return undefined.
+
+```
+function fearNotLetter(str) {
+  for (let i = 0; i < str.length; i++) {
+    const charCode = str.charCodeAt(i);
+    if (charCode !== str.charCodeAt(0) + i) {
+      return String.fromCharCode(charCode - 1);
+    }
+  }
+  return undefined;
+}
+
+fearNotLetter("abce");
+```
+
+# Sorted Union
+
+Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+
+Check the assertion tests for examples.
+
+```
+function uniteUnique(arr) {
+  const finalArray = [];
+
+  for (let i = 0; i < arguments.length; i++) {
+    const arrayArguments = arguments[i];
+
+    for (let j = 0; j < arrayArguments.length; j++) {
+      let indexValue = arrayArguments[j];
+
+      if (finalArray.indexOf(indexValue) < 0) {
+        finalArray.push(indexValue);
+      }
+    }
+  }
+
+  return finalArray;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+```
+
+# Convert HTML Entities
+
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+
+```
+function convertHTML(str) {
+  const htmlConv = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+
+  return str
+    .split("")
+    .map(ch => htmlConv[ch] || ch)
+    .join("");
+}
+
+convertHTML("Dolce & Gabbana");
+```
+
+# Sum All Odd Fibonacci Numbers
+
+Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+
+The first two numbers in the Fibonacci sequence are 0 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first seven numbers of the Fibonacci sequence are 0, 1, 1, 2, 3, 5 and 8.
+
+For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
+
+```
+function sumFibs(num) {
+  let firstNum = 0;
+  let secondNum = 1;
+  let result = 0;
+  while (secondNum <= num) {
+    if (secondNum % 2 !== 0) {
+      result += secondNum;
+    }
+    secondNum += firstNum;
+    firstNum = secondNum - firstNum;
+  }
+  return result;
+}
+
+sumFibs(4);
+```
+
+# Sum All Primes
+
+A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2 is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
+
+Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+
+```
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function sumPrimes(num) {
+  var sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+sumPrimes(10);
+```
+
+# Smallest Common Multiple
+
+Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+
+The range will be an array of two numbers that will not necessarily be in numerical order.
+
+For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+
+```
+function smallestCommons(arr) {
+  let max = Math.max(arr[0], arr[1]);
+  let min = Math.min(arr[0], arr[1]);
+  let result = max;
+
+  for(let i = max; i >= min; i--){
+    if(result % i !== 0){
+      result += max; 
+      i = max;
+    } 
+  }
+  return result;
+}
+
+smallestCommons([1,5]);
+```
+
+# Drop it
+
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+```
+function dropElements(arr, func) {
+  while (arr.length > 0 && !func(arr[0])) {
+    arr.shift();
+  }
+  return arr;
+}
+
+dropElements([1, 2, 3], function(n) {return n < 3; });
+```
+
+# Steamroller
+
+Flatten a nested array. You must account for varying levels of nesting.
+
+```
+function steamrollArray(arr) {
+  while(arr.findIndex(Array.isArray) > -1){
+    let x=arr.shift();
+    if(Array.isArray(x)) {
+      arr=arr.concat(x);
+    } else {
+      arr.push(x);
+    }
+  }
+  return arr;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
+```
+
+# Binary Agents
+
+Return an English translated sentence of the passed binary string.
+
+The binary string will be space separated.
+
+```
+function binaryAgent(str) {
+  return str
+    .split(" ")
+    .map(i => String.fromCharCode(parseInt(i,2)))
+    .join("");
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+```
+
+# Everything Be True
+
+Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+In other words, you are given an array collection of objects. The predicate pre will be an object property and you need to return true if its value is truthy. Otherwise, return false.
+
+In JavaScript, truthy values are values that translate to true when evaluated in a Boolean context.
+
+Remember, you can access object properties through either dot notation or [] notation.
+
+```
+function truthCheck(collection, pre) {
+    return collection.every(obj => obj[pre]);
+}
+
+truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot");
+```
+
+# Arguments Optional
+
+Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+
+For example, addTogether(2, 3) should return 5, and addTogether(2) should return a function.
+
+Calling this returned function with a single argument will then return the sum:
+
+var sumTwoAnd = addTogether(2);
+sumTwoAnd(3) returns 5.
+
+If either argument isn't a valid number, return undefined.
+
+```
+function addTogether() {
+  let [first, second] = arguments;
+  if (typeof(first) !== "number")
+    return undefined;
+  if (arguments.length === 1)
+    return (second) => addTogether(first, second);
+  if (typeof(second) !== "number")
+    return undefined;
+  return first + second;
+}
+
+addTogether(2,3);
+```
+
+# Make a Person
+
+Fill in the object constructor with the following methods below:
+
+```
+getFirstName()
+getLastName()
+getFullName()
+setFirstName(first)
+setLastName(last)
+setFullName(firstAndLast)
+```
+
+Run the tests to see the expected output for each method. The methods that take an argument must accept only one argument and it has to be a string. These methods must be the only available means of interacting with the object.
+
+```
+const Person = function(firstAndLast) {
+  let fullName = firstAndLast;
+
+  this.getFirstName = function() {
+    return fullName.split(" ")[0];
+  };
+
+  this.getLastName = function() {
+    return fullName.split(" ")[1];
+  };
+
+  this.getFullName = function() {
+    return fullName;
+  };
+
+  this.setFirstName = function(name) {
+    fullName = name + " " + fullName.split(" ")[1];
+  };
+
+  this.setLastName = function(name) {
+    fullName = fullName.split(" ")[0] + " " + name;
+  };
+
+  this.setFullName = function(name) {
+    fullName = name;
+  };
+};
+
+const bob = new Person("Bob Ross");
+console.log(bob.getFullName());
+```
+
+# Map the Debris
+
+According to Kepler's Third Law, the orbital period T of two point masses orbiting each other in a circular or elliptic orbit is:
+
+T = 2 pi * (a^3 / μ)^1/2
+
+- a is the orbit's semi-major axis
+- μ=GM is the standard gravitational parameter
+- G is the gravitational constant,
+- M is the mass of the more massive body.
+
+Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+
+The array will contain objects in the format ```{name: 'name', avgAlt: avgAlt}```.
+
+The values should be rounded to the nearest whole number. The body being orbited is Earth.
+
+The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km3s-2.
+
+```
+function orbitalPeriod(arr) {
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+  return arr.map(({ name, avgAlt }) => {
+    const earth = earthRadius + avgAlt;
+    const orbitalPeriod = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earth, 3)/GM));
+    return { name, orbitalPeriod };
+  });
+}
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+```
